@@ -1,21 +1,43 @@
-# proiectpoo3
-JOC NAVE 
+# 🚀 Joc Nave – Proiect POO
 
-Am implementat un joc care are mai multe avem o batalie intre doua grupari de nava , avand echipa din stanga si echipa din drepata, fiecare dintre echipe avand zona ei lupta fiind frontala 
+Acesta este un joc realizat in POO in care doua echipe de nave se lupta intre ele. Fiecare echipa are nave cu forme si comportamente diferite, iar proiectilele se deplaseaza automat spre zona inamica. Jocul afiseaza la final cine castiga in functie de navele ramase.
 
-NAVA MAMA -> proiectile verticale , fiecare nava are abilitatea regenerare viata nava mama poate sa isi dea o viata in plus cand vietile ei ajung la 2
+---
 
-NAVA CERC -> nava e in coltul din dreapta si proiectilele vreau sa mi se duca spre stanga/dreapta
-	-> are proiectile automate
-	  
+## 🎮 Descrierea jocului
 
-NAVA TRIUNGHI -> nava e in coltul din stanga/dreapta
-		-> are proiectile automate 
+Exista **doua echipe**:
+- echipa din stanga
+- echipa din dreapta
 
+Fiecare echipa are propriile nave si propria zona de joc. Lupta este frontala, iar proiectilele celor doua parti se ciocnesc pe mijloc.
 
-template - am folosit la proiectile unde am realizat interfata grafica am folosit o la coiziuni 
+### Tipuri de nave
 
-Single pattern am folosit la clasa GameManager unde am folosit single pattern pe care l am folosit la interfata grafica pentru fiecare acesta se apelaleaza la final sa imi zica scorul finale si asa se decide cine a castigat
+### 🔴 Nava Mama
+- Trage proiectile verticale.
+- Are mai multa viata si poate sa-si regenereze o viata cand ajunge la 2.
+- Este cea mai rezistenta nava din echipa.
 
+### 🔵 Nava Cerc
+- Sta in colt (dreapta/stanga).
+- Proiectilele merg spre dreapta/stanga.
+- Trage automat.
+
+### 🟢 Nava Triunghi
+- Pozitionata in lateral, pe stanga sau dreapta.
+- Tot cu proiectile automate.
+- Este o nava usoara de atac constant.
+
+---
+
+## 💥 Proiectile si coliziuni
+
+Am facut un sistem simplu de coliziuni:
+- proiectilul loveste nava → scade viata
+- cand o nava ramane fara viata → este eliminata
+- proiectilele au directii diferite in functie de tipul navei
+
+Pentru proiectile am folosit **template-uri**, ca sa pot genera rapid proiectile de tipuri diferite.
 
 
